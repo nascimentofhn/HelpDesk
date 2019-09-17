@@ -7,8 +7,9 @@ namespace HelpDesk.Models
 {
     public class Ticket
     {
+        
 
-
+        
         public Guid TicketId { get; set; }
 
         [Required]
@@ -32,10 +33,12 @@ namespace HelpDesk.Models
         public TicketStatus Status { get; set; }
         public TicketPriority Priority { get; set; }
 
-        public Ticket ()
+       public Ticket ()
         {
 
         }
+
+
 
         public Ticket(Guid ticketId, string nameTicket, string description, string email, string phone, TicketStatus status, TicketPriority priority)
         {
@@ -47,5 +50,7 @@ namespace HelpDesk.Models
             Status = status;
             Priority = priority;
         }
+        
+
     }
 }
