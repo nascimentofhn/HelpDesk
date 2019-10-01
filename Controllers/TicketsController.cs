@@ -33,5 +33,15 @@ namespace HelpDesk.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create (Ticket ticket)
+        {
+            _context.Add(ticket);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
